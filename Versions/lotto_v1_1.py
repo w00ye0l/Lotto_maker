@@ -66,12 +66,9 @@ class Lotto():
                     l_dic[j] = 1
                 else:
                     l_dic[j] += 1
-            print(l_dic)
 
         l_dic = sorted(l_dic.items(), key=lambda x: x[1], reverse=True)
-        print(l_dic)
         temp = l_dic[:6]
-        print(temp)
 
         for i in range(6):
             result.append(temp[i][0])
