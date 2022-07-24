@@ -59,21 +59,23 @@ class Lotto():
             self.numbers = numbers
 
     def compute_number(self):
-        for i in range(self.n):
-            l_dic = {}
-            result = []
+        l_dic = {}
+        result = []
 
+        for i in range(self.n):
+            temp = []
             for j in self.numbers[i]:
                 if not j in l_dic:
                     l_dic[j] = 1
                 else:
                     l_dic[j] += 1
 
-            l_dic = sorted(l_dic.items(), key=lambda x: x[1], reverse=True)
-            temp = l_dic[:6]
+        l_dic = sorted(l_dic.items(), key=lambda x: x[1], reverse=True)
+        temp = l_dic[:6]
 
-            for i in range(6):
-                result.append(temp[i][0])
+        for i in range(6):
+            result.append(temp[i][0])
+        result.sort()
 
         print(f'나만의 숫자로 랜덤 돌린 횟수: {self.n}, 구매할 로또 번호: {result}', end='\n\n')
 
