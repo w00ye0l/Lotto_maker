@@ -35,6 +35,12 @@ body {
     font-size: 3vw;
 }
 
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .btn {
     padding: 1vw;
     font-size: 1.4444vw;
